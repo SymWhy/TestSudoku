@@ -1,0 +1,6 @@
+class grid() {
+    create 3x3 grid
+    a[0,1,2]
+    b[0,1,2]
+    c[0,1,2]
+}
