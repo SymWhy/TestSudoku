@@ -1,6 +1,6 @@
 https://www.geeksforgeeks.org/program-sudoku-generator/
 
-class grid() {
+function buildGrid() {
     create 3x3 grid populated with 0s or some null placeholder
     a[0,0,0]
     b[0,0,0]
@@ -15,7 +15,7 @@ function populateRnd() {
     repeat until grid is full (check for 0s?)
 }
 
-class board() {
+function buildBoard() {
     create 3x3 (or more?) empty grid()s
     sudokuGrids[gridA gridB gridC
                gridD gridE gridF
