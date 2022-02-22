@@ -1,7 +1,10 @@
 // JavaScript source code
-    let digits = [11,22,33,44,55,66,77,88,99];
+let digits = [11,22,33,44,55,66,77,88,99];
+let myGrid = digits; //current grid in numerical order
+
     let myGrid = [];
 function buildGrid() {
+    myGrid = []; //clear myGrid
     for (let i = 0; i < 9; i++) {
         x= getRandomInt(digits.length);
         let n = digits[x];
