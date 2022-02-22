@@ -3,7 +3,7 @@ body {
 }
 
 .container{
-    width: 163px;
+    width: fit-content;
     margin: auto;
     margin-top: 50px;
 }
