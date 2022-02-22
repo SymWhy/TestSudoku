@@ -24,3 +24,7 @@ body {
     border: none;
     text-align: center;
 }
+
+.body button {
+    margin: 25% auto;
+}
