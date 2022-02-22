@@ -2,7 +2,17 @@
 let digits = [11,22,33,44,55,66,77,88,99];
 let myGrid = digits; //current grid in numerical order
 
-    let myGrid = [];
+let numbers = document.getElementsByClassName('numbers'); //returns an array of HTML elements
+
+window.onload = setupGrid();
+
+function setupGrid() {
+    //consider generating boxes in js instead of html
+    for (let i = 0; i < numbers.length; i++) {
+        numbers[i].innerHTML = myGrid[i];
+    }
+}
+
 function buildGrid() {
     myGrid = []; //clear myGrid
     for (let i = 0; i < 9; i++) {
