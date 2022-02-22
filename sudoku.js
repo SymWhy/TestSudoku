@@ -1,8 +1,7 @@
 // JavaScript source code
-function buildGrid() {
     let digits = [11,22,33,44,55,66,77,88,99];
     let myGrid = [];
-
+function buildGrid() {
     for (let i = 0; i < 9; i++) {
         x= getRandomInt(digits.length);
         let n = digits[x];
