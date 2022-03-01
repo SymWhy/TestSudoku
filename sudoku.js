@@ -2,7 +2,7 @@
 let digits = [11,22,33,44,55,66,77,88,99];
 let myGrid = digits; //current grid in numerical order
 
-let numbers = document.getElementsByClassName('numbers'); //returns an array of HTML elements
+let numbers = document.getElementsByClassName('boxes'); //returns an array of HTML elements
 let button = document.getElementById('shuffler');
 
 //grab div containing all 9 boxes
