@@ -5,7 +5,8 @@ let myGrid = digits; //current grid in numerical order
 let numbers = document.getElementsByClassName('numbers'); //returns an array of HTML elements
 let button = document.getElementById('shuffler');
 
-window.onload = setupGrid();
+//grab div containing all 9 boxes
+const sudokuBox = document.getElementById('sudoku');
 
 button.addEventListener('click', () => {
     buildGrid();
