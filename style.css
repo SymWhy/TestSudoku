@@ -10,7 +10,8 @@ body {
 
 #sudoku {
     display: grid;
-    grid: repeat(3, 50px) / auto-flow 50px;
+    grid: repeat(1, 50px) / repeat(3, 50px);
+    border: 2px solid black;
 }
 
 .boxes {
