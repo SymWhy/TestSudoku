@@ -48,6 +48,7 @@ function build3x3() {
         //add div to sudoku box
         sudokuBox.appendChild(myElement);
     }
+    //now we have a series of nine divs
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
