@@ -36,6 +36,24 @@ function buildGrid() {
     setupGrid();
 }
 
+function build3x3() {
+    
+    //sudokuBox.appendChild(child);
+    for (let i = 0; i < digits.length; i++) {
+        //create a new div
+        let myElement = document.createElement('div');
+        myElement.className = 'boxes';
+        //generate div id based on location in array
+        myElement.id = 'box' + i;
+        //add div to sudoku box
+        sudokuBox.appendChild(myElement);
+        //every three boxes add a line break
+        if ((i + 1) % 3 == 0) {
+            sudokuBox.append('br');
+        }
+    }
+}
+
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(n) {
     return Math.floor(Math.random() * n);
