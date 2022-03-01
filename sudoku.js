@@ -48,6 +48,7 @@ function build3x3() {
         myElement.className = 'boxes';
         //generate div id based on location in array
         myElement.id = 'box' + i;
+        myElement.innerText = digits[i];
         //add div to sudoku box
         sudokuBox.appendChild(myElement);
     }
