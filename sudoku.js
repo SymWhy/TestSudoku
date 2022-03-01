@@ -8,6 +8,9 @@ let button = document.getElementById('shuffler');
 //grab div containing all 9 boxes
 const sudokuBox = document.getElementById('sudoku');
 
+window.onload = setupGrid(); //populate grid when window loads
+
+//reshuffle grid on button click
 button.addEventListener('click', () => {
     buildGrid();
 });
