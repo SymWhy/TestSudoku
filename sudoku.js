@@ -47,10 +47,6 @@ function build3x3() {
         myElement.id = 'box' + i;
         //add div to sudoku box
         sudokuBox.appendChild(myElement);
-        //every three boxes add a line break
-        if ((i + 1) % 3 == 0) {
-            sudokuBox.append('br');
-        }
     }
 }
 
