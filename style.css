@@ -24,3 +24,21 @@ body {
 .body button {
     margin: 25% auto;
 }
+
+#grid9x9{
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#grid3x3{
+    width: auto;
+    grid: subgrid;
+}
+
+.numbox {
+    border: 1px solid black;
+    padding: 25%;
+    text-align: center;
+    vertical-align: middle;
+}
