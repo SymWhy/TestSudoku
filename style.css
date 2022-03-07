@@ -8,7 +8,10 @@ body {
     margin-top: 50px;
 }
 
-#sudoku {
+.sudoku9x9 {
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
     display: grid;
     grid: repeat(1, 50px) / repeat(3, 50px);
     border: 2px solid black;
