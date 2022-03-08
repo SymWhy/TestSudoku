@@ -19,8 +19,17 @@ body {
 
 .numbers {
     width: auto;
-    margin: 25%;
-    padding: 0px;
-    border: none;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#grid3x3{
+    display: grid;
+    width: auto;
+    grid: repeat(3, 1fr);
+}
+
+.numbox {
+    border: 1px solid black;
+    padding: 25%;
     text-align: center;
 }
