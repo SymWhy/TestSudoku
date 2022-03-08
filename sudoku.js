@@ -29,11 +29,22 @@ function buildGrid() {
     let digits = [11,22,33,44,55,66,77,88,99];
     let myGrid = [];
 
-    for (let i = 0; i < 9; i++) {
-        x= getRandomInt(digits.length);
-        let n = digits[x];
+function setupGrid() {
+    //consider generating boxes in js instead of html
+    for (let i = 0; i < numbers.length; i++) {
+        numbers[i].innerHTML = myGrid[i];
+    }
+}
+
+function buildGrid() {
+    myGrid = []; //clear myGrid
+    unTrash = [11,22,33,44,55,66,77,88,99];
+    for (let i = 0; i < digits.length; i++) {
+        x = getRandomInt(unTrash.length);
+        let n = unTrash[x];
+        
         myGrid.push(n);
-        digits.splice(x,1);
+        unTrash.splice(x,1);
     }
     //return digits;
     setupGrid();

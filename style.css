@@ -3,7 +3,7 @@ body {
 }
 
 .container{
-    width: 163px;
+    width: fit-content;
     margin: auto;
     margin-top: 50px;
 }
@@ -32,4 +32,8 @@ body {
     border: 1px solid black;
     padding: 25%;
     text-align: center;
+}
+
+.body button {
+    margin: 25% auto;
 }
