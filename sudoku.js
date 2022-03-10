@@ -1,5 +1,5 @@
 // JavaScript source code
-let digits = [11,22,33,44,55,66,77,88,99];
+const digits = [11,22,33,44,55,66,77,88,99];
 
 let button = document.getElementById('shuffler');
 
