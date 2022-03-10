@@ -1,6 +1,18 @@
 // JavaScript source code
 const digits = [11,22,33,44,55,66,77,88,99];
 
+//how do we generate variables dynamically?
+let subgridA = digits;
+let subgridB = digits;
+let subgridC = digits;
+let subgridD = digits;
+let subgridE = digits;
+let subgridF = digits;
+let subgridG = digits;
+let subgridH = digits;
+let subgridI = digits;
+const grids = [subgridA,subgridB,subgridC,subgridD,subgridE,subgridF,subgridG,subgridH,subgridI];
+
 let button = document.getElementById('shuffler');
 
 window.onload = () => {
@@ -14,22 +26,22 @@ button.addEventListener('click', () => {
 
 function setupGrid() {
     for (let i = 0; i < digits.length; i++) {
-        //placeholder
+        let myGrid = grids[i];
+        console.log(myGrid);
     }
-    console.log(digits);
 }
 
 function buildGrid() {
-    myGrid = []; //holder for new shuffled array
+    mySubgrid = []; //holder for new shuffled array
     unTrash = [11,22,33,44,55,66,77,88,99]; //move digits from here to myGrid
     for (let i = 0; i < digits.length; i++) {
         x = getRandomInt(unTrash.length);
         let n = unTrash[x];
         
-        myGrid.push(n);
+        mySubgrid.push(n);
         unTrash.splice(x,1);
     }
-    console.log(myGrid);
+    console.log(mySubgrid);
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
