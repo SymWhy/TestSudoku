@@ -33,16 +33,17 @@ function setupGrid() {
 
 function buildGrid() {
     for (let j = 0; j < 9; j++) {
-    mySubgrid = []; //holder for new shuffled array
-    unTrash = [11,22,33,44,55,66,77,88,99]; //move digits from here to myGrid
-    for (let i = 0; i < digits.length; i++) {
-        x = getRandomInt(unTrash.length);
-        let n = unTrash[x];
-        
-        mySubgrid.push(n);
-        unTrash.splice(x,1);
+        mySubgrid = []; //holder for new shuffled array
+        unTrash = [11, 22, 33, 44, 55, 66, 77, 88, 99]; //move digits from here to myGrid
+        for (let i = 0; i < 9; i++) {
+            x = getRandomInt(unTrash.length);
+            let n = unTrash[x];
+
+            mySubgrid.push(n);
+            unTrash.splice(x, 1);
+        }
+        console.log(mySubgrid);
     }
-    console.log(mySubgrid);
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
