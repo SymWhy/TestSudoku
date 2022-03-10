@@ -32,6 +32,7 @@ function setupGrid() {
 }
 
 function buildGrid() {
+    for (let j = 0; j < 9; j++) {
     mySubgrid = []; //holder for new shuffled array
     unTrash = [11,22,33,44,55,66,77,88,99]; //move digits from here to myGrid
     for (let i = 0; i < digits.length; i++) {
