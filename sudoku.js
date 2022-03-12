@@ -87,7 +87,7 @@ function buildGrid() {
             gridBy.push(grids[i]);
         }
         else {
-            gridCy.push(grid[i]);
+            gridCy.push(grids[i]);
         }
     }
     console.log('columns:')
