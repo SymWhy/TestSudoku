@@ -77,21 +77,21 @@ function buildGrid() {
     }
     console.log('rows:');
     console.log(gridAx, gridBx, gridCx);
-}
 
     for (let i = 0; i < 9; i++) {
-        if (i == 0 || i == 3 || i == 6){
+        if (i % 3 == 0){
             gridAy.push(grids[i]);
         }
-        else if ( i == 1 || i == 4 || i == 7) {
+        else if (i % 3 == 1) {
             gridBy.push(grids[i]);
         }
-        else {
+        else if (i % 3 == 2) {
             gridCy.push(grids[i]);
         }
     }
     console.log('columns:')
     console.log(gridAy, gridBy, gridCy);
+}
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(n) {
