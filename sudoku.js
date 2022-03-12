@@ -42,7 +42,9 @@ function buildGrid() {
             mySubgrid.push(n);
             unTrash.splice(x, 1);
         }
-        console.log(mySubgrid);
+        //console.log(mySubgrid);
+        grids[j] = mySubgrid
+        console.log(grids[j]);
     }
 }
 
