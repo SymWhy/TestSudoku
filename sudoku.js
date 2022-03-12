@@ -59,7 +59,10 @@ function buildGrid() {
     gridBx = [];
     gridCx = [];
 
-        console.log(grids[j]);
+    gridAy = [];
+    gridBy = [];
+    gridCy = [];
+
     //grab rows (x)
     for (let i = 0; i < 9; i++) {
         if (i < 3) {
@@ -75,6 +78,20 @@ function buildGrid() {
     console.log('rows:');
     console.log(gridAx, gridBx, gridCx);
 }
+
+    for (let i = 0; i < 9; i++) {
+        if (i == 0 || i == 3 || i == 6){
+            gridAy.push(grids[i]);
+        }
+        else if ( i == 1 || i == 4 || i == 7) {
+            gridBy.push(grids[i]);
+        }
+        else {
+            gridCy.push(grid[i]);
+        }
+    }
+    console.log('columns:')
+    console.log(gridAy, gridBy, gridCy);
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(n) {
