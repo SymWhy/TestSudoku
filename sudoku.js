@@ -72,6 +72,7 @@ function buildGrid() {
             gridCx.push(grids[i]);
         }
     }
+    console.log('rows:');
     console.log(gridAx, gridBx, gridCx);
 }
 
