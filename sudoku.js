@@ -1,6 +1,14 @@
 // JavaScript source code
 const digits = [11,22,33,44,55,66,77,88,99];
 
+let gridAx = [];
+let gridBx = [];
+let gridCx = [];
+
+let gridAy = [];
+let gridBy = [];
+let gridCy = [];
+
 //how do we generate variables dynamically?
 let subgridA = digits;
 let subgridB = digits;
@@ -44,8 +52,27 @@ function buildGrid() {
         }
         //console.log(mySubgrid);
         grids[j] = mySubgrid
-        console.log(grids[j]);
+        //console.log(grids[j]);
     }
+    //clear grid primes
+    gridAx = [];
+    gridBx = [];
+    gridCx = [];
+
+        console.log(grids[j]);
+    //grab rows (x)
+    for (let i = 0; i < 9; i++) {
+        if (i < 3) {
+            gridAx.push(grids[i]);
+        }
+        else if (i < 6) {
+            gridBx.push(grids[i]);
+        }
+        else {
+            gridCx.push(grids[i]);
+        }
+    }
+    console.log(gridAx, gridBx, gridCx);
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
