@@ -91,6 +91,54 @@ function buildGrid() {
     }
     console.log('columns:')
     console.log(gridAy, gridBy, gridCy);
+
+    //print sudoku grid
+    console.log(
+        '|' + 
+        gridAy[0].slice(0,3) + '|',
+        gridBy[0].slice(0,3) + '|',
+        gridCy[0].slice(0,3) + '|',
+        '\n',
+        '|' +
+        gridAy[1].slice(0,3) + '|',
+        gridBy[1].slice(0,3) + '|',
+        gridCy[1].slice(0,3) + '|',
+        '\n',
+        '|' +
+        gridAy[2].slice(0,3) + '|',
+        gridBy[2].slice(0,3) + '|',
+        gridCy[2].slice(0,3) + '|',
+        '\n' + '------------------------------' + '\n',
+        '|' + 
+        gridAy[0].slice(3,6) + '|',
+        gridBy[0].slice(3,6) + '|',
+        gridCy[0].slice(3,6) + '|',
+        '\n',
+        '|' +
+        gridAy[1].slice(3,6) + '|',
+        gridBy[1].slice(3,6) + '|',
+        gridCy[1].slice(3,6) + '|',
+        '\n',
+        '|' +
+        gridAy[2].slice(3,6) + '|',
+        gridBy[2].slice(3,6) + '|',
+        gridCy[2].slice(3,6) + '|',
+        '\n' + '------------------------------' + '\n',
+        '|' + 
+        gridAy[0].slice(6,9) + '|',
+        gridBy[0].slice(6,9) + '|',
+        gridCy[0].slice(6,9) + '|',
+        '\n',
+        '|' +
+        gridAy[1].slice(6,9) + '|',
+        gridBy[1].slice(6,9) + '|',
+        gridCy[1].slice(6,9) + '|',
+        '\n',
+        '|' +
+        gridAy[2].slice(6,9) + '|',
+        gridBy[2].slice(6,9) + '|',
+        gridCy[2].slice(6,9) + '|',
+    );
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
