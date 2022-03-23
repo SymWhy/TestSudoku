@@ -26,7 +26,11 @@ function buildGrid() {
 }
 
 function rotateArray(a,k) {
-    return myArray;
+    //take a section of array 'a' starting at 'k'
+    let b = a.slice(k, a.length);
+    //take a section of 'a' from the beginning and paste it to
+    //the end of b
+    return b.concat(a.slice(0,k));
 }
 
 
