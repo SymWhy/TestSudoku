@@ -1,7 +1,7 @@
 // JavaScript source code
 const digits = [1,2,3,4,5,6,7,8,9];
-const n = digits.length;
-const N = digits.length ^ 2;
+const N = digits.length; //9
+const M = digits.length.sqrt(); //3
 
 let gridArray = [];
 let button = document.getElementById('shuffler');
@@ -18,7 +18,7 @@ button.addEventListener('click', () => {
 function buildGrid() {
     //build test grid that should pass as a valid sudoku grid
     let testDigits = [0,3,6,1,4,7,2,5,8];
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < N; i++) {
         gridArray = gridArray.concat(rotateArray(digits,testDigits[i]));
     }
     return gridArray;
