@@ -26,7 +26,6 @@ function buildGrid() {
 }
 
 function rotateArray(a,k) {
-QZ
     return myArray;
 }
 
