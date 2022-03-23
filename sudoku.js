@@ -1,7 +1,7 @@
 // JavaScript source code
 const digits = [1,2,3,4,5,6,7,8,9];
 const N = digits.length; //9, grid size
-const M = digits.length.sqrt(); //3, subgrid size
+const M = Math.sqrt(N); //3, subgrid size
 
 let gridArray = [];
 let button = document.getElementById('shuffler');
