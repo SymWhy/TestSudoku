@@ -14,14 +14,11 @@ button.addEventListener('click', () => {
 });
 
 function buildGrid() {
-    //testing, no randomization
-    for (let j = 0; j < digits.length; j++) {
-        //fill mySubgrid with 1-9
-        for (let i = 0; i < digits.length; i++) {
-            gridArray.push(digits[i]);
-        }
+    //build test grid that should pass as a valid sudoku grid
+    let testDigits = [0,3,6,1,4,7,2,5,8];
+    for (i = 0; i < testDigits.length; i++) {
+        gridArray = gridArray.concat(rotateArray(digits,testDigits[i]));
     }
-    //print sudoku grid
     return gridArray;
 }
 
