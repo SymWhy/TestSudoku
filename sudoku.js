@@ -24,6 +24,12 @@ function buildGrid() {
     return gridArray;
 }
 
+//where 'a' is the array you want to pull row 'x' from
+function getRow(a,x) {
+    //row number*9, end of that row
+    return a.slice(x*N, x*N + N);
+}
+
 function rotateArray(a,k) {
     //take a section of array 'a' starting at 'k'
     let b = a.slice(k, a.length);
