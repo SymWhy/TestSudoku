@@ -24,6 +24,13 @@ function buildGrid() {
     return gridArray;
 }
 
+//where 'a' is the array you want to print as a grid
+function printGrid(a) {
+    for (i = 0; i < N; i++) {
+        console.log(getRow(a,i).join(' ')); 
+    }
+}
+
 //where 'a' is the array you want to pull row 'x' from
 function getRow(a,x) {
     //row number*9, end of that row
