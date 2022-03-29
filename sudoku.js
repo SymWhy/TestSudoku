@@ -33,9 +33,17 @@ function printGrid(a) {
 }
 
 //where 'a' is the array you want to pull row 'x' from
-function getRow(a,x) {
+function getRow(a,y) {
     //row number*9, end of that row
-    return a.slice(x*N, x*N + N);
+    return a.slice(y*N, y*N + N);
+}
+
+function getColumn(a,x) {
+    let myCol = [];
+    for (let i = 0; i < N; i++) {
+        myCol.push(a[i*N + x]);
+    }
+    return myCol;
 }
 
 function rotateArray(a,k) {
