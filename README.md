@@ -6,7 +6,7 @@ Loop 9 (Assign digits to respective grid[i])
 catch exceptions for row/column/box input
 
 Grid = the whole sudoku grid of 3x3 subgrids
-Subgrid = 3x3 subgrid of 9 random digits
+Box = 3x3 subgrid of 9 random digits
 Digit = Numbers within a subgrid, none should repeat
 
 Array = ITS AN ARRAY
