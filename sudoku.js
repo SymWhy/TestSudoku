@@ -13,6 +13,7 @@ let button = document.getElementById('shuffler');
 //reshuffle grid on button click
 button.addEventListener('click', () => {
     buildGrid();
+    printGrid(gridArray);
 });
 
 function buildGrid() {
