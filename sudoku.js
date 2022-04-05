@@ -74,6 +74,7 @@ function getValid(n) {
             return isValid;
         }        
     });
+    
     //get column containing n
 
     //check if valid
