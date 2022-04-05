@@ -57,6 +57,21 @@ function getBox(a, x, y) {
     return myBox;
 }
 
+function getValid(n) {
+    //get row containing n
+
+    //check if valid
+
+    //get column containing n
+
+    //check if valid
+
+    //get box containing n
+
+    //check if valid
+    
+}
+
 function rotateArray(a,k) {
     //take a section of array 'a' starting at 'k'
     let b = a.slice(k, a.length);
