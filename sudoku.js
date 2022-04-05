@@ -58,10 +58,22 @@ function getBox(a, x, y) {
 }
 
 function getValid(n) {
+    let isValid = true;
+    let myDigits = digits;
     //get row containing n
-
+    let myRow = getRow(gridArray, n - (n % N));
     //check if valid
-
+    myRow.forEach(element => {
+        if (myDigits.includes(myRow[i])) {
+            myDigits.pop(myRow[i]);
+        }
+        else {
+            isValid = false;
+        }
+        if (isValid === false || myDigits.length === 0) {
+            return isValid;
+        }        
+    });
     //get column containing n
 
     //check if valid
@@ -69,7 +81,7 @@ function getValid(n) {
     //get box containing n
 
     //check if valid
-    
+
 }
 
 function rotateArray(a,k) {
