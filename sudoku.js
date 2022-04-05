@@ -46,6 +46,17 @@ function getColumn(a,x) {
     return myCol;
 }
 
+function getBox(a, x, y) {
+    let myBox = [];
+    let myRow = y*M;
+    let myCol = x*M;
+    for (let i = 0; i < M; i++) {
+        let start = (myRow + i)*N + myCol;
+        myBox = myBox.concat(a.slice(start, start + M));
+    }
+    return myBox;
+}
+
 function rotateArray(a,k) {
     //take a section of array 'a' starting at 'k'
     let b = a.slice(k, a.length);
