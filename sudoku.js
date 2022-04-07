@@ -58,22 +58,21 @@ function getBox(a, x, y) {
 }
 
 function getValid(n) {
-    let isValid = true;
-    let myDigits = digits;
+    let myDigits = [];
     //get row containing n
     let myRow = getRow(gridArray, n - (n % N));
+    console.log(myRow);
     //check if valid
-    myRow.forEach(element => {
+    for (let i = 0; i < N; i++) {
+        console.log(myDigits);
         if (myDigits.includes(myRow[i])) {
-            myDigits.pop(myRow[i]);
+            return false;
         }
         else {
-            isValid = false;
+            myDigits.concat(myRow[i]);
         }
-        if (isValid === false || myDigits.length === 0) {
-            return isValid;
-        }        
-    });
+    }
+    return true;
     
     //get column containing n
 
