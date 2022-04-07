@@ -85,6 +85,11 @@ function getValid(n) {
 
 }
 
+function getDigit(d) {
+    //return digit in space d
+    return gridArray[d]
+}
+
 function rotateArray(a,k) {
     //take a section of array 'a' starting at 'k'
     let b = a.slice(k, a.length);
