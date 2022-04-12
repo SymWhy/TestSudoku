@@ -19,15 +19,15 @@ button.addEventListener('click', () => {
 function buildGrid() {
     //build test grid that should pass as a valid sudoku grid
     let testDigits = [0,3,6,1,4,7,2,5,8];
-    for (i = 0; i < N; i++) {
+    gridArray = [];
+    for (let i = 0; i < testDigits.length; i++) {
         gridArray = gridArray.concat(rotateArray(digits,testDigits[i]));
     }
-    return gridArray;
 }
 
 //where 'a' is the array you want to print as a grid
 function printGrid(a) {
-    for (i = 0; i < N; i++) {
+    for (let i = 0; i < N; i++) {
         console.log(getRow(a,i).join(' ')); 
     }
 }
