@@ -32,6 +32,7 @@ function printGrid(a) {
     }
 }
 
+//return entire array for the given row
 //where 'a' is the array you want to pull row 'x' from
 function getRow(a,y) {
     //row number*9, end of that row
@@ -58,23 +59,22 @@ function getBox(a, x, y) {
 }
 
 //get row, column, box of index n and check for validity
-function getValid(n) {
+function getValidRow(n) {
     let myDigits = [];
-    //get row containing n
+    //get full row containing n
     let myRow = getRow(gridArray, n - (n % N));
-    console.log(myRow);
     //check if valid
     for (let i = 0; i < N; i++) {
-        console.log(myDigits);
         if (myDigits.includes(myRow[i])) {
             return false;
         }
         else {
-            myDigits.concat(myRow[i]);
+            myDigits.push(myRow[i]);
         }
     }
     return true;
-    
+}
+
     //get column containing n
 
     //check if valid
