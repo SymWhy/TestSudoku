@@ -57,6 +57,7 @@ function getBox(a, x, y) {
     return myBox;
 }
 
+//get row, column, box of index n and check for validity
 function getValid(n) {
     let myDigits = [];
     //get row containing n
