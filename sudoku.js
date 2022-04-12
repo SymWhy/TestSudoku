@@ -47,14 +47,21 @@ function getColumn(a,x) {
     return myCol;
 }
 
-function getBox(a, x, y) {
+function getBox(a, n) {
     let myBox = [];
-    let myRow = y*M;
-    let myCol = x*M;
-    for (let i = 0; i < M; i++) {
-        let start = (myRow + i)*N + myCol;
-        myBox = myBox.concat(a.slice(start, start + M));
-    }
+    if (n < 3) {}
+    else if (n < 6) {}
+    else if (n < 9) {}
+
+
+
+    // let myBox = [];
+    // let myRow = y*M;
+    // let myCol = x*M;
+    // for (let i = 0; i < M; i++) {
+    //     let start = (myRow + i)*N + myCol;
+    //     myBox = myBox.concat(a.slice(start, start + M));
+    // }
     return myBox;
 }
 
@@ -72,17 +79,32 @@ function getValidRow(n) {
             myDigits.push(myRow[i]);
         }
     }
+    // let myDigits = []
+    // let myCol = getColumn(gridArray, )
     return true;
 }
 
-    //get column containing n
-
+function getValidCol(n) {
+    let myDigits = [];
+    //get full column containing n
+    let myCol = getColumn(gridArray, gridArray[n]);
     //check if valid
+    for (let i = 0; i < N; i++) {
+        if (myDigits.includes(myCol[i])) {
+        return false;
+        }
+        else {
+            myDigits.push(myCol[i]);
+        }
+    }
+    return true;
+}
 
+function getValidBox(n) {
+    let myDigits = [];
     //get box containing n
-
+    let myBox = getBox
     //check if valid
-
 }
 
 function getDigit(d) {
