@@ -47,21 +47,14 @@ function getColumn(a,x) {
     return myCol;
 }
 
-function getBox(a, n) {
+function getBox(a, x, y) {
     let myBox = [];
-    if (n < 3) {}
-    else if (n < 6) {}
-    else if (n < 9) {}
-
-
-
-    // let myBox = [];
-    // let myRow = y*M;
-    // let myCol = x*M;
-    // for (let i = 0; i < M; i++) {
-    //     let start = (myRow + i)*N + myCol;
-    //     myBox = myBox.concat(a.slice(start, start + M));
-    // }
+    let myRow = y*M;
+    let myCol = x*M;
+    for (let i = 0; i < M; i++) {
+        let start = (myRow + i)*N + myCol;
+        myBox = myBox.concat(a.slice(start, start + M));
+    }
     return myBox;
 }
 
@@ -100,11 +93,17 @@ function getValidCol(n) {
     return true;
 }
 
-function getValidBox(n) {
+function getValidBox(x, y) {
     let myDigits = [];
-    //get box containing n
-    let myBox = getBox
+    //get box containing x/y
+    let myBox = getBox(gridArray, x, y);
+    // x and y are the coordinates of the 9 boxes between 0-2
     //check if valid
+    for (let i = 0; i < N; i++) {
+        if (getRow(gridArray, x) % M === 0) {}
+        else if (getRow(gridArray, x) % m === 1) {}
+        else {}
+    }
 }
 
 function getDigit(d) {
