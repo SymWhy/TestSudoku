@@ -93,17 +93,23 @@ function getValidCol(n) {
     return true;
 }
 
-function getValidBox(x, y) {
+function getValidBox(n) {
     let myDigits = [];
-    //get box containing x/y
+    //the remainder is the x coordinate
+    let x = n % M;
+    //rounding down gets you the y coordinate
+    let y = Math.floor(n / M);
     let myBox = getBox(gridArray, x, y);
-    // x and y are the coordinates of the 9 boxes between 0-2
-    //check if valid
+    console.log(myBox);
     for (let i = 0; i < N; i++) {
-        if (getRow(gridArray, x) % M === 0) {}
-        else if (getRow(gridArray, x) % m === 1) {}
-        else {}
+        if (myDigits.includes(myBox[i])) {
+            return false;
+        }
+        else {
+            myDigits.push(myBox[i]);
+        }
     }
+    return true;
 }
 
 function getDigit(d) {
