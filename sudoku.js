@@ -58,6 +58,31 @@ function getBox(a, x, y) {
     return myBox;
 }
 
+function testGrid(g) {
+    //getValidRow
+    let validRow = () => {
+        for (let i = 0; i < N; i++) {
+            getValidRow(i);
+        }
+    }
+    //getValidColumn
+    let validColumn = () => {
+        for (let i = 0; i < N; i++) {
+            getValidColumn(i);
+        }
+        //getValidBox
+        let validBox = () => {
+            for (let i = 0; i < N; i++) {
+                getValidBox(i);
+            }
+        }
+        if (validRow === true && validColumn === true && validBox === true) {
+            return true;
+        }
+        else { return false; }
+    }
+}
+
 //get row, column, box of index n and check for validity
 function getValidRow(n) {
     let myDigits = [];
