@@ -70,18 +70,26 @@ function testGrid(g) {
         for (let i = 0; i < N; i++) {
             getValidColumn(i);
         }
-        //getValidBox
-        let validBox = () => {
-            for (let i = 0; i < N; i++) {
-                getValidBox(i);
-            }
+    }
+    //getValidBox
+    let validBox = () => {
+        for (let i = 0; i < N; i++) {
+            getValidBox(i);
         }
         
     }
-    if (validRow === true && validColumn === true && validBox === true) {
-            return true;
-        }
-    else { return false; }
+    if (validRow === true) {
+        console.log('all rows valid');
+    }
+    else {console.log('invalid row detected');}
+    if (validColumn === true) {
+        console.log('all columns valid');
+    }
+    else {console.log('invalid column detected');}
+    if (validBox === true) {
+        console.log('all boxes valid');
+    }
+    else {console.log('invalid box detected');}
 }
 
 //get row, column, box of index n and check for validity
