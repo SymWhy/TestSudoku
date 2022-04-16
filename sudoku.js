@@ -76,11 +76,12 @@ function testGrid(g) {
                 getValidBox(i);
             }
         }
-        if (validRow === true && validColumn === true && validBox === true) {
+        
+    }
+    if (validRow === true && validColumn === true && validBox === true) {
             return true;
         }
-        else { return false; }
-    }
+    else { return false; }
 }
 
 //get row, column, box of index n and check for validity
