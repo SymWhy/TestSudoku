@@ -58,24 +58,24 @@ function getBox(a, x, y) {
     return myBox;
 }
 
-function getValidGrid() {
+function getValidGrid(g) {
     //getValidRow
     for (let i = 0; i < N; i++) {
-        if (!getValidRow(i)) {
+        if (!getValidRow(g, i)) {
             return false;
         }
     }
 
     //getValidColumn
     for (let i = 0; i < N; i++) {
-        if (!getValidColumn(i)) {
+        if (!getValidColumn(g, i)) {
             return false;
         }
     }
 
     //getValidBox
     for (let i = 0; i < N; i++) {
-        if (!getValidBox(i)) {
+        if (!getValidBox(g, i)) {
             return false;
         }
     }
@@ -84,10 +84,10 @@ function getValidGrid() {
 }
 
 //get row, column, box of index n and check for validity
-function getValidRow(n) {
+function getValidRow(g, n) {
     let myDigits = [];
     //get full row containing n
-    let myRow = getRow(gridArray, n - (n % N));
+    let myRow = getRow(g, n - (n % N));
     //check if valid
     for (let i = 0; i < N; i++) {
         if (myDigits.includes(myRow[i])) {
@@ -102,10 +102,10 @@ function getValidRow(n) {
     return true;
 }
 
-function getValidCol(n) {
+function getValidCol(g, n) {
     let myDigits = [];
     //get full column containing n
-    let myCol = getColumn(gridArray, gridArray[n]);
+    let myCol = getColumn(g, g[n]);
     //check if valid
     for (let i = 0; i < N; i++) {
         if (myDigits.includes(myCol[i])) {
@@ -118,13 +118,13 @@ function getValidCol(n) {
     return true;
 }
 
-function getValidBox(n) {
+function getValidBox(g, n) {
     let myDigits = [];
     //the remainder is the x coordinate
     let x = n % M;
     //rounding down gets you the y coordinate
     let y = Math.floor(n / M);
-    let myBox = getBox(gridArray, x, y);
+    let myBox = getBox(g, x, y);
     console.log(myBox);
     for (let i = 0; i < N; i++) {
         if (myDigits.includes(myBox[i])) {
