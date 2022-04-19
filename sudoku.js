@@ -58,38 +58,29 @@ function getBox(a, x, y) {
     return myBox;
 }
 
-function testGrid(g) {
+function getValidGrid() {
     //getValidRow
-    let validRow = () => {
-        for (let i = 0; i < N; i++) {
-            getValidRow(i);
+    for (let i = 0; i < N; i++) {
+        if (!getValidRow(i)) {
+            return false;
         }
     }
+
     //getValidColumn
-    let validColumn = () => {
-        for (let i = 0; i < N; i++) {
-            getValidColumn(i);
+    for (let i = 0; i < N; i++) {
+        if (!getValidColumn(i)) {
+            return false;
         }
     }
+
     //getValidBox
-    let validBox = () => {
-        for (let i = 0; i < N; i++) {
-            getValidBox(i);
+    for (let i = 0; i < N; i++) {
+        if (!getValidBox(i)) {
+            return false;
         }
-        
     }
-    if (validRow === true) {
-        console.log('all rows valid');
-    }
-    else {console.log('invalid row detected');}
-    if (validColumn === true) {
-        console.log('all columns valid');
-    }
-    else {console.log('invalid column detected');}
-    if (validBox === true) {
-        console.log('all boxes valid');
-    }
-    else {console.log('invalid box detected');}
+
+    return true;
 }
 
 //get row, column, box of index n and check for validity
