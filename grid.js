@@ -1,16 +1,18 @@
 //Javascript source code
 
-const grid9x9 = document.getElementById('grid9x9');
+function buildGrid() {
+    //https://code-boxx.com/create-grid-javascript/
 
-let subgridList = [];
+    let data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    let grid = document.getElementById('grid');
 
-function buildSubgrid() {
-    myDigit = '☐';
-    for (let i = 0; i < 9; i++) {
-        let mySubgrid = document.createElement('div');
-        mySubgrid.id = 'subgrid' + i;
-        mySubgrid.innerText = myDigit;
-            grid9x9.appendChild(mySubgrid);
-            subgridList.push(mySubgrid);
+    for (let i = 0; i < data.length; i++) {
+        let subdata = data[i];
+        for (let j = 0; j < subdata.length; j++) {
+            let cell = document.createElement('div');
+            cell.innerHTML = subdata[j];
+            cell.className = 'cell';
+            grid.appendChild(cell);
+        }
     }
 }

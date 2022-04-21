@@ -39,6 +39,12 @@ body {
     grid: subgrid;
 }
 
+#grid {
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .numbox {
     border: 1px solid black;
     padding: 25%;
