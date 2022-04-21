@@ -10,6 +10,9 @@ let button = document.getElementById('shuffler');
 //     setupGrid();
 // }; //populate grid when window loads
 
+let numbers = document.getElementsByClassName('boxes'); //returns an array of HTML elements
+let button = document.getElementById('shuffler');
+
 //reshuffle grid on button click
 button.addEventListener('click', () => {
     buildGrid();
@@ -148,7 +151,6 @@ function rotateArray(a,k) {
     //the end of b
     return b.concat(a.slice(0,k));
 }
-
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(n) {
