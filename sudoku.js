@@ -102,7 +102,7 @@ function getValidRow(g, n) {
     return true;
 }
 
-function getValidCol(g, n) {
+function getValidColumn(g, n) {
     let myDigits = [];
     //get full column containing n
     let myCol = getColumn(g, g[n]);
@@ -125,7 +125,6 @@ function getValidBox(g, n) {
     //rounding down gets you the y coordinate
     let y = Math.floor(n / M);
     let myBox = getBox(g, x, y);
-    console.log(myBox);
     for (let i = 0; i < N; i++) {
         if (myDigits.includes(myBox[i])) {
             return false;
