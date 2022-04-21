@@ -10,9 +10,6 @@ let button = document.getElementById('shuffler');
 //     setupGrid();
 // }; //populate grid when window loads
 
-let numbers = document.getElementsByClassName('boxes'); //returns an array of HTML elements
-let button = document.getElementById('shuffler');
-
 //reshuffle grid on button click
 button.addEventListener('click', () => {
     buildGrid();
