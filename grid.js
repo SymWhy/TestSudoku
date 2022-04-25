@@ -12,7 +12,7 @@ function buildGrid() {
             let box = document.createElement('div');
             //box.innerHTML = subdata[j];
             box.className = 'box';
-            for (let k = 0; k < 9; k++) {
+            for (let k = 0; k < 3; k++) {
                 let cell = document.createElement('div');
                 cell.innerHTML = subdata[k];
                 cell.className = 'cell';
