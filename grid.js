@@ -13,7 +13,12 @@ function buildBoard() {
     for (let i = 0; i < 9; i++) {
         //create nine divs
         let box = document.createElement('div');
-        box.className = 'box';
+        if (i % 2 === 0) {
+            box.className = 'box1';
+        }
+        else {
+            box.className = 'box2';
+        }
         box.id = 'box' + letters[i];
         grid.appendChild(box);
         for (let j = 0; j < 9; j++) {
