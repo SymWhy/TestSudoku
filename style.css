@@ -3,9 +3,8 @@ body {
 }
 
 .container{
-    width: 150px;
+    width: auto;
     margin: 50px;
-    border: 2px solid black;
 }
 
 .box {
@@ -29,7 +28,7 @@ master {
 
 #grid {
     display: grid;
-    width: auto;
+    width: fit-content;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -58,17 +57,13 @@ master {
     display: inline-block;
     margin: 0px;
     border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .numbers {
     width: auto;
     grid-template-columns: repeat(3, 1fr);
-}
-
-#grid3x3{
-    display: grid;
-    width: auto;
-    grid: repeat(3, 1fr);
 }
 
 .numbox {
