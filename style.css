@@ -28,17 +28,6 @@ master {
     margin: 25% auto;
 }
 
-#grid9x9{
-    display: grid;
-    width: auto;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-#grid3x3{
-    width: auto;
-    grid: subgrid;
-}
-
 #grid {
     display: grid;
     width: auto;
@@ -47,14 +36,17 @@ master {
 
 .box {
     border: 1px solid black;
-    padding: 25%;
+    display: grid;
+    width: 50%;
+    margin: 0px;
 }
 
 .cell {
     border: 1px solid black;
-    padding: 25%;
-    margin: 0px;
+    padding: 5px;
+    width: 25%;
+    display: grid;
     text-align: center;
     vertical-align: middle;
-    display: inline-block;
+    grid: subgrid;
 }
