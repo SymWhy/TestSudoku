@@ -35,7 +35,6 @@ master {
 .box {
     border: 1px solid black;
     display: grid;
-    width: 50%;
     margin: 0px;
     grid-template-columns: repeat(3, 1fr);
 }
