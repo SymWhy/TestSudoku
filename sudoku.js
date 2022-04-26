@@ -28,6 +28,7 @@ function setupGrid() {
 function buildGrid() {
     let digits = [11,22,33,44,55,66,77,88,99];
     let myGrid = [];
+}
 
 function setupGrid() {
     //consider generating boxes in js instead of html
