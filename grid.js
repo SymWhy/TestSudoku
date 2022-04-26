@@ -1,5 +1,9 @@
 //Javascript source code
 
+window.onload = () => {
+         buildGrid();
+     };
+
 function buildGrid() {
     //https://code-boxx.com/create-grid-javascript/
 
