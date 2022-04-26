@@ -1,10 +1,10 @@
 //Javascript source code
 
 window.onload = () => {
-         buildGrid();
+         buildBoard();
      };
 
-function buildGrid() {
+function buildBoard() {
     //https://code-boxx.com/create-grid-javascript/
 
     let data = [1,2,3,4,5,6,7,8,9, 4,5,6,7,8,9,1,2,3, 7,8,9,1,2,3,4,5,6];
