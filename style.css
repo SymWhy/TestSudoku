@@ -3,12 +3,12 @@ body {
 }
 
 .container{
-    width: fit-content;
-    margin: auto;
-    margin-top: 50px;
+    width: 150px;
+    margin: 50px;
+    border: 2px solid black;
 }
 
-.sudoku9x9 {
+.box {
     width: fit-content;
     margin: auto;
     margin-top: 50px;
@@ -19,7 +19,6 @@ body {
 
 master {
     border: 1px solid black;
-    padding: 25%;
     text-align: center;
     vertical-align: middle;
 }
@@ -39,9 +38,10 @@ master {
     display: grid;
     width: 50%;
     margin: 0px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.cell {
+/* .cell {
     border: 1px solid black;
     padding: 5px;
     width: 25%;
@@ -49,4 +49,34 @@ master {
     text-align: center;
     vertical-align: middle;
     grid: subgrid;
+} */
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    display: inline-block;
+    margin: 0px;
+    border: 1px solid black;
+}
+
+.numbers {
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#grid3x3{
+    display: grid;
+    width: auto;
+    grid: repeat(3, 1fr);
+}
+
+.numbox {
+    border: 1px solid black;
+    padding: 25%;
+    text-align: center;
+}
+
+.body button {
+    margin: 25% auto;
 }
