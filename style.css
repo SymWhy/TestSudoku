@@ -3,8 +3,8 @@ body {
 }
 
 .container{
-    width: auto;
-    margin: 50px;
+    width: fit-content;
+    margin: auto;   
 }
 
 .box {
@@ -22,8 +22,8 @@ master {
     vertical-align: middle;
 }
 
-.body button {
-    margin: 25% auto;
+.button {
+    margin: 50% auto;
 }
 
 #grid {
