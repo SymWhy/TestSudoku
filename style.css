@@ -4,28 +4,63 @@ body {
 
 .container{
     width: fit-content;
-    margin: auto;
-    margin-top: 50px;
+    margin: auto;   
 }
 
-.boxes {
+.box {
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid: repeat(1, 50px) / repeat(3, 50px);
+    border: 2px solid black;
+}
+
+master {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button {
+    margin: 50% auto;
+}
+
+#grid {
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.box1 {
+    border: 1px solid black;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    background: #e6e6e6;
+}
+
+.box2 {
+    border: 1px solid black;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    background: #fafafa;
+}
+
+.cell {
     width: 50px;
     height: 50px;
-    background: #ffffff;
     display: inline-block;
     margin: 0px;
     border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .numbers {
     width: auto;
     grid-template-columns: repeat(3, 1fr);
-}
-
-#grid3x3{
-    display: grid;
-    width: auto;
-    grid: repeat(3, 1fr);
 }
 
 .numbox {
