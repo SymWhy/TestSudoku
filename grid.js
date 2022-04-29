@@ -1,5 +1,9 @@
 //Javascript source code
 
+let cells = [];
+let cellsByBox = [];
+let data = [1,2,3,4,5,6,7,8,9, 4,5,6,7,8,9,1,2,3, 7,8,9,1,2,3,4,5,6, 2,3,4,5,6,7,8,9,1, 5,6,7,8,9,1,2,3,4, 8,9,1,2,3,4,5,6,7, 3,4,5,6,7,8,9,1,2, 6,7,8,9,1,2,3,4,5, 9,1,2,3,4,5,6,7,8];
+
 window.onload = () => {
          buildBoard();
      };
@@ -10,6 +14,9 @@ function buildBoard() {
     let data = [1,2,3,4,5,6,7,8,9, 4,5,6,7,8,9,1,2,3, 7,8,9,1,2,3,4,5,6];
     let grid = document.getElementById('grid');
     let letters = ['A','B','C','D','E','F','G','H','I'];
+    let lineA = [];
+    let lineB = [];
+    let lineC = [];
     for (let i = 0; i < 9; i++) {
         //create nine divs
         let box = document.createElement('div');
@@ -28,6 +35,24 @@ function buildBoard() {
             cell.id = 'cell' + letters[i] + j;
             cell.innerHTML = cell.id;
             box.appendChild(cell);
+            //separate top middle and bottom of the box
+            if (j < 3) { lineA.push(cell); }
+            else if ( j < 6) { lineB.push(cell); }
+            else { lineC.push(cell); }
+            cellsByBox.push(cell);
         }
+        // console.log(lineA);
+        //every three boxes
+        if ((i + 1) % 3 === 0) {
+            //combine the rows into array cells[] and clear temp arrays
+            cells = cells.concat(lineA, lineB, lineC);
+            //console.log(cells);
+            lineA = [];
+            lineB = [];
+            lineC = [];
+        }
+    }
+
+}
     }
 }
