@@ -5,13 +5,17 @@ let cellsByBox = [];
 let data = [1,2,3,4,5,6,7,8,9, 4,5,6,7,8,9,1,2,3, 7,8,9,1,2,3,4,5,6, 2,3,4,5,6,7,8,9,1, 5,6,7,8,9,1,2,3,4, 8,9,1,2,3,4,5,6,7, 3,4,5,6,7,8,9,1,2, 6,7,8,9,1,2,3,4,5, 9,1,2,3,4,5,6,7,8];
 
 window.onload = () => {
-         buildBoard();
-     };
+    buildBoard();
+    populate();
+};
+
+button.addEventListener('click', () => {
+    populate(data);
+});
 
 function buildBoard() {
     //https://code-boxx.com/create-grid-javascript/
 
-    let data = [1,2,3,4,5,6,7,8,9, 4,5,6,7,8,9,1,2,3, 7,8,9,1,2,3,4,5,6];
     let grid = document.getElementById('grid');
     let letters = ['A','B','C','D','E','F','G','H','I'];
     let lineA = [];
@@ -54,5 +58,9 @@ function buildBoard() {
     }
 
 }
+
+function populate(a) {
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].innerHTML = a[i];
     }
 }
