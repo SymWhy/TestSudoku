@@ -5,6 +5,7 @@ const M = Math.sqrt(N); //3, subgrid size
 
 let gridArray = [];
 let button = document.getElementById('shuffler');
+let checker = document.getElementById('checker');
 
 // window.onload = () => {
 //     setupGrid();
