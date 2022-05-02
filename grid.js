@@ -1,5 +1,5 @@
 //Javascript source code
-
+const digits = [1,2,3,4,5,6,7,8,9];
 let cells = [];
 let cellsByBox = [];
 let data = [1,2,3,4,5,6,7,8,9, 4,5,6,7,8,9,1,2,3, 7,8,9,1,2,3,4,5,6, 2,3,4,5,6,7,8,9,1, 5,6,7,8,9,1,2,3,4, 8,9,1,2,3,4,5,6,7, 3,4,5,6,7,8,9,1,2, 6,7,8,9,1,2,3,4,5, 9,1,2,3,4,5,6,7,8];
@@ -67,8 +67,25 @@ function populate(a) {
 }
 
 function randomize(a) {
-    for (let i = 0; i < a.length; i++) {
-        //get random number 1-9
-        data[i] = Math.floor(Math.random() * 10);
+    //moving digits into the trash
+    let trash = [];
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            //get random number 1-9
+            myDigit = (getRandomInt(9)) + 1;
+            while (trash.includes(myDigit)) {
+                myDigit = (getRandomInt(9)) + 1;
+            }
+            trash.push(myDigit)
+
+            data[i * j] = myDigit;
+        }
+        //empty trash
+        trash = [];
     }
+}
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomInt(n) {
+    return Math.floor(Math.random() * n);
 }
