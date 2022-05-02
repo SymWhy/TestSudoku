@@ -6,10 +6,11 @@ let data = [1,2,3,4,5,6,7,8,9, 4,5,6,7,8,9,1,2,3, 7,8,9,1,2,3,4,5,6, 2,3,4,5,6,7
 
 window.onload = () => {
     buildBoard();
-    populate();
+    populate(data);
 };
 
 button.addEventListener('click', () => {
+    randomize(data);
     populate(data);
 });
 
@@ -62,5 +63,12 @@ function buildBoard() {
 function populate(a) {
     for (let i = 0; i < cells.length; i++) {
         cells[i].innerHTML = a[i];
+    }
+}
+
+function randomize(a) {
+    for (let i = 0; i < a.length; i++) {
+        //get random number 1-9
+        data[i] = Math.floor(Math.random() * 10);
     }
 }
