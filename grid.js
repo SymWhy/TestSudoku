@@ -69,6 +69,6 @@ function populate(a) {
 function randomize(a) {
     for (let i = 0; i < a.length; i++) {
         //get random number 1-9
-        data[i] = Math.floor(Math.random() * 10);
+        (data[i] = Math.floor(Math.random() * 9) + 1);
     }
 }
