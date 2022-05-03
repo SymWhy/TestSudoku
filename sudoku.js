@@ -16,6 +16,7 @@ let validCheck = document.getElementById('validbox');
 button.addEventListener('click', () => {
     buildGrid();
     printGrid(gridArray);
+    validCheck.innerHTML = '?';
 });
 
 checker.addEventListener('click', () => {
