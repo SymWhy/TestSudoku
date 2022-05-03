@@ -6,6 +6,7 @@ const M = Math.sqrt(N); //3, subgrid size
 let gridArray = [];
 let button = document.getElementById('shuffler');
 let checker = document.getElementById('checker');
+let validCheck = document.getElementById('validbox');
 
 // window.onload = () => {
 //     setupGrid();
@@ -16,6 +17,15 @@ button.addEventListener('click', () => {
     buildGrid();
     printGrid(gridArray);
 });
+
+checker.addEventListener('click', () => {
+    if (getValidGrid(gridArray)) {
+        validCheck.innerHTML = 'FALSE';
+    }
+    else {
+        validCheck.innerHTML = 'TRUE';
+    }
+})
 
 function buildGrid() {
     //build test grid that should pass as a valid sudoku grid
